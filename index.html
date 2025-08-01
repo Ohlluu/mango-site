@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <title>MangoPets is Coming Soon!</title>
   <style>
     body {
@@ -55,12 +56,33 @@
   <h1>MangoPets 🐶🐱</h1>
   <p>We're building the ultimate pet care app. Join our early tester waitlist!</p>
 
-  <form action="https://formspree.io/f/manbjdgy" method="POST">
-    <input type="hidden" name="_redirect" value="https://mymangopets.com/thank-you.html" />
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <input type="tel" name="phone" placeholder="Your phone number" />
-    <button type="submit">Join the Waitlist</button>
-  </form>
+  <form id="waitlist-form" action="https://formspree.io/f/manbjdgy" method="POST">
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="email" name="email" placeholder="Your email" required />
+  <input type="tel" name="phone" placeholder="Your phone number" />
+  <button type="submit">Join the Waitlist</button>
+</form>
+
+<script>
+  const form = document.getElementById('waitlist-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const r = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (r.ok) {
+        window.location.href = '/thank-you.html';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch {
+      alert('Network error. Please try again.');
+    }
+  });
+</script>
 </body>
 </html>
