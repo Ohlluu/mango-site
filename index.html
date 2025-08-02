@@ -117,26 +117,9 @@
     }
 
     .donate a {
-      color: #e91e63; /* 🍓 warm pink */
-      text-decoration: none;
-    }
-.countdown-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffe4e1;
-  color: #333;
-  font-size: 0.9rem;
-  padding: 0.75rem;
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Sniglet', cursive;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
-  z-index: 100;
+  color: #f7c6cc; /* 🍥 calm rose pink */
+  text-decoration: none;
 }
-
-
 
     .donate a:hover {
       text-decoration: underline;
@@ -152,7 +135,7 @@
 
     @media (max-width: 420px) {
       .emoji {
-        font-size: 0.5em;
+        font-size: 0.3em;
       }
     }
   </style>
@@ -181,35 +164,5 @@
     You can donate via <strong>Zelle</strong> or <strong>Venmo</strong> to:<br>
     <strong><a href="mailto:info@mymangopets.com">info@mymangopets.com</a></strong>
   </div>
-
-
-<div class="countdown-footer" id="countdown-footer">
-  🐾 MangoPets launches in: <span id="countdown">Loading...</span>
-</div>
-
-<script>
-  function updateCountdown() {
-    const launchDate = new Date('2025-12-01T12:00:00-06:00'); // CST
-    const now = new Date();
-    const diff = launchDate - now;
-
-    if (diff <= 0) {
-      document.getElementById('countdown').textContent = 'We’re live! 🎉';
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById('countdown').textContent =
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
-
 </body>
 </html>
