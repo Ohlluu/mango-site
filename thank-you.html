@@ -2,25 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
   <title>Thank You!</title>
   <style>
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
     body {
       background-color: peachpuff;
-      font-family: sans-serif;
+      font-family: 'Sniglet', cursive;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
     }
+
     h1 {
       font-size: 2rem;
+    }
+
+    .emoji {
+      display: inline-block;
+      animation: bounce 1.2s ease-in-out infinite;
+      font-size: 1.2em;
+      margin-left: 0.2rem;
+    }
+
+    .emoji.delay {
+      animation-delay: 0.3s;
     }
   </style>
 </head>
 <body>
-  <h1>Thanks for joining the MangoPets waitlist! 🐶🐱</h1>
+  <h1>Thanks for joining the MangoPets waitlist! <span class="emoji">🐶</span><span class="emoji delay">🐱</span></h1>
 </body>
 </html>
