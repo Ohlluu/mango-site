@@ -44,12 +44,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* ⬅️ moved content higher */
       text-align: center;
     }
 
     h1 {
       font-size: 2.5rem;
+      margin-top: 2rem;
       margin-bottom: 0.5rem;
       white-space: nowrap;
       line-height: 1.2;
@@ -69,7 +70,7 @@
 
     p {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       max-width: 400px;
     }
 
@@ -79,6 +80,7 @@
       gap: 0.75rem;
       width: 100%;
       max-width: 300px;
+      margin-bottom: 1.5rem;
       z-index: 2;
     }
 
@@ -106,15 +108,23 @@
 
     .donate {
       font-size: 0.85rem;
-      margin-top: 2rem;
       color: #333;
       background: rgba(255, 255, 255, 0.5);
       padding: 1rem;
       border-radius: 12px;
+      margin-top: 0.5rem; /* ⬅️ reduced top margin */
       z-index: 2;
     }
 
-    /* Floating paw bubbles */
+    .donate a {
+      color: #e91e63; /* 🍓 warm pink */
+      text-decoration: none;
+    }
+
+    .donate a:hover {
+      text-decoration: underline;
+    }
+
     .floating-paw {
       position: absolute;
       font-size: 1.5rem;
@@ -123,7 +133,6 @@
       pointer-events: none;
     }
 
-    /* ✅ Reduce emoji size on small screens */
     @media (max-width: 420px) {
       .emoji {
         font-size: 1em;
@@ -137,6 +146,7 @@
   <span class="floating-paw" style="left:30%; animation-delay: 3s;">🐾</span>
   <span class="floating-paw" style="left:50%; animation-delay: 1s;">🦴</span>
   <span class="floating-paw" style="left:70%; animation-delay: 2s;">🐾</span>
+  <span class="floating-paw" style="left:85%; animation-delay: 4s;">❤️</span>
 
   <!-- Content -->
   <h1>MangoPets <span class="emoji">🐶</span><span class="emoji delay">🐱</span></h1>
