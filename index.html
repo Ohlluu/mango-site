@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>MangoPets is Coming Soon!</title>
   <style>
     body {
@@ -37,7 +37,7 @@
       padding: 0.75rem;
       font-size: 1rem;
       border: none;
-      border-radius: 20px; /* ⬅️ More rounded */
+      border-radius: 20px;
     }
     input {
       background-color: #fff;
@@ -55,12 +55,13 @@
 <body>
   <h1>MangoPets 🐶🐱</h1>
   <p>We're building the ultimate pet care app. Join our early tester waitlist!</p>
-  <form action="https://formspree.io/f/manbjdgy" method="POST">
-  <input type="hidden" name="data-redirect" value="https://mymangopets.com/thank-you.html" />
-  <input type="text" name="name" placeholder="Your name" required />
-  <input type="email" name="email" placeholder="Your email" required />
-  <input type="tel" name="phone" placeholder="Your phone number" />
-  <button type="submit">Join the Waitlist</button>
-</form>
+
+  <!-- ✅ Fixed form tag: only one closing </form> -->
+  <form action="https://formspree.io/f/manbjdgy" method="POST" data-redirect="https://mymangopets.com/thank-you.html">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <input type="tel" name="phone" placeholder="Your phone number" />
+    <button type="submit">Join the Waitlist</button>
+  </form>
 </body>
 </html>
