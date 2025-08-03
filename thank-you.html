@@ -4,48 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
-  <title>Thank You!</title>
+  <title>Thank You – MangoPets</title>
   <style>
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.6);
+        opacity: 0;
       }
       50% {
-        transform: translateY(-8px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
       }
     }
 
     body {
-      background-color: peachpuff;
+      background-color: #fff8f0;
       font-family: 'Sniglet', cursive;
+      margin: 0;
+      padding: 2rem;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
       text-align: center;
-      padding: 1rem;
-      box-sizing: border-box;
+      position: relative;
     }
 
     h1 {
+      font-size: 2.8rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .heart {
       font-size: 2rem;
+      margin-left: 0.3rem;
     }
 
-    .emoji {
+    p {
+      font-size: 1rem;
+      max-width: 400px;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+
+    a.button {
       display: inline-block;
-      animation: bounce 1.2s ease-in-out infinite;
-      font-size: 1.2em;
-      margin-left: 0.2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
     }
 
-    .emoji.delay {
-      animation-delay: 0.3s;
+    a.button:hover {
+      background-color: #000;
+    }
+
+    .confetti {
+      position: absolute;
+      font-size: 1.2rem;
+      animation: floatUp 8s linear infinite;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .c1 { left: 10%; animation-delay: 0s; }
+    .c2 { left: 30%; animation-delay: 2s; }
+    .c3 { left: 50%; animation-delay: 1s; }
+    .c4 { left: 70%; animation-delay: 3s; }
+    .c5 { left: 90%; animation-delay: 4s; }
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .heart {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      a.button {
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Thanks for joining the MangoPets waitlist! <span class="emoji">🐶</span><span class="emoji delay">🐱</span></h1>
+
+  <!-- Confetti-like floating emojis -->
+  <span class="confetti c1">🎉</span>
+  <span class="confetti c2">💖</span>
+  <span class="confetti c3">🐾</span>
+  <span class="confetti c4">✨</span>
+  <span class="confetti c5">🌟</span>
+
+  <h1>Thank You<span class="heart">💛</span></h1>
+  <p>You're officially on our early access list. We can’t wait to share MangoPets with you soon. You’ll be the first to know when we launch!</p>
+
+  <a href="index.html" class="button">← Back to Homepage</a>
+
 </body>
 </html>
