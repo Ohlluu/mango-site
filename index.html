@@ -91,6 +91,19 @@
       border-radius: 20px;
     }
 
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 0.5rem;
+    }
+
+    label {
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
     input {
       background-color: #fff;
     }
@@ -112,14 +125,14 @@
       background: rgba(255, 255, 255, 0.5);
       padding: 1rem;
       border-radius: 12px;
-      margin-top: 0.5rem; /* ⬅️ reduced top margin */
+      margin-top: 0.5rem;
       z-index: 2;
     }
 
     .donate a {
-  color: #000;
-  text-decoration: none;
-}
+      color: #000;
+      text-decoration: none;
+    }
 
     .donate a:hover {
       text-decoration: underline;
@@ -156,6 +169,8 @@
     <input type="text" name="name" placeholder="Your name" required />
     <input type="email" name="email" placeholder="Your email" required />
     <input type="tel" name="phone" placeholder="Your phone number" pattern="[0-9]{10,15}" inputmode="numeric" required />
+    <input type="text" name="organization" placeholder="Organization (if applicable)" />
+    <label><input type="checkbox" name="hasPet" value="Yes" /> I have a pet</label>
     <button type="submit">Join the Waitlist</button>
   </form>
 
