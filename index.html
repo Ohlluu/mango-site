@@ -119,62 +119,12 @@
       background-color: #000;
     }
 
-    .donate {
-      font-size: 0.85rem;
-      color: #333;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 1rem;
-      border-radius: 12px;
-      margin-top: 0.5rem;
-      z-index: 2;
-    }
-
-    .donate a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    .donate a:hover {
-      text-decoration: underline;
-    }
-
     .floating-paw {
       position: absolute;
       font-size: 1.5rem;
       animation: floatUp 10s linear infinite;
       opacity: 0;
       pointer-events: none;
-    }
-
-    .features {
-      background-color: white;
-      padding: 2rem;
-      width: 100%;
-      max-width: 700px;
-      margin-top: 3rem;
-      border-radius: 12px;
-    }
-
-    .features h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .features ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .features li {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
-
-    .logo {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      width: 80px;
     }
 
     @media (max-width: 400px) {
@@ -185,9 +135,6 @@
   </style>
 </head>
 <body>
-  <!-- Logo -->
-  <img src="logo.png" alt="MangoPets Logo" class="logo" />
-
   <!-- Floating paw icons -->
   <span class="floating-paw" style="left:10%; animation-delay: 0s;">🐾</span>
   <span class="floating-paw" style="left:30%; animation-delay: 3s;">🐾</span>
@@ -199,20 +146,6 @@
   <h1>MangoPets <span class="emoji">🐶</span><span class="emoji delay">🐱</span></h1>
   <p>We're building the ultimate pet community app. Join our early tester waitlist!</p>
 
-  <!-- Features Section -->
-  <div class="features">
-    <h2>App Features:</h2>
-    <ul>
-      <li>Post adorable pics of your fur babies</li>
-      <li>Track vaccines & meds (so you never forget again)</li>
-      <li>Connect & message fellow pet lovers</li>
-      <li>Discover pet events from local organizations</li>
-      <li>Post about lost pets in your area to help bring them home</li>
-      <li>...and many more!</li>
-    </ul>
-  </div>
-
-  <!-- Join Waitlist Form -->
   <form action="https://formspree.io/f/manbjdgy" method="POST">
     <input type="text" name="name" placeholder="Your name" required />
     <input type="email" name="email" placeholder="Your email" required />
@@ -222,10 +155,5 @@
     <button type="submit">Join the Waitlist</button>
   </form>
 
-  <div class="donate">
-    💸 Want to help us launch faster?<br>
-    You can donate via <strong>Venmo</strong> to:<br>
-    <strong><a href="mailto:info@mymangopets.com">info@mymangopets.com</a></strong>
-  </div>
 </body>
 </html>
