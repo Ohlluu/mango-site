@@ -1,104 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
-  <title>Thank You – MangoPets</title>
-  <style>
-    @keyframes bounceOverText {
-      0%, 90%, 100% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(-30px);
-      }
-      50% {
-        transform: translateY(-45px);
-      }
-      75% {
-        transform: translateY(-30px);
-      }
-    }
-
-    body {
-      background-color: peachpuff;
-      font-family: 'Sniglet', cursive;
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow: hidden;
-      text-align: center;
-      position: relative;
-    }
-
-    .heart-animate {
-      font-size: 2.2rem;
-      color: #ffadad;
-      animation: bounceOverText 6s ease-in-out infinite;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      color: #333;
-      margin: 0 0 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      max-width: 400px;
-      color: #444;
-      margin-bottom: 2rem;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      transition: background 0.3s ease;
-    }
-
-    a.button:hover {
-      background-color: #000;
-    }
-
-    @media (max-width: 420px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .heart-animate {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-
-      a.button {
-        font-size: 0.8rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You! | MangoPets Waitlist</title>
+  <meta name="description" content="Thank you for joining the MangoPets waitlist! We'll notify you as soon as the ultimate pet lifestyle app is available.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="assets/mangowebsitelogo.jpg" alt="MangoPets Logo">
+          <span class="logo-text">MangoPets</span>
+        </a>
+        
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Back to Home</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <div class="heart-animate">💛</div>
-  <h1>Thank You</h1>
-  <p>You're officially on our early access list. We can’t wait to share MangoPets with you soon. You’ll be the first to know when our beta launches!</p>
+  <!-- Thank You Section -->
+  <section style="padding: calc(80px + var(--space-3xl)) 0 var(--space-3xl); background: var(--gradient-hero); color: var(--pure-white); min-height: 100vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="text-center">
+        <div style="font-size: 6rem; margin-bottom: var(--space-lg); animation: bounce 2s ease-in-out infinite;">
+          🎉
+        </div>
+        
+        <h1 style="color: var(--pure-white); margin-bottom: var(--space-md);">
+          Welcome to the <span class="text-playful">MangoPets</span> Family!
+        </h1>
+        
+        <p class="text-large" style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Thank you for joining our waitlist! You're now part of an exclusive community of pet parents who will be the first to experience the ultimate pet lifestyle app.
+        </p>
+        
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: var(--radius-xl); padding: var(--space-2xl); max-width: 700px; margin: 0 auto var(--space-xl) auto;">
+          <h3 style="color: var(--pure-white); margin-bottom: var(--space-lg);">What happens next?</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
+            <div class="text-center">
+              <div style="background: rgba(255, 255, 255, 0.2); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md) auto; font-size: 2rem;">
+                📧
+              </div>
+              <h4 style="color: var(--pure-white); margin-bottom: var(--space-sm);">Confirmation Email</h4>
+              <p style="color: rgba(255, 255, 255, 0.8);">Check your inbox for a welcome email with exclusive updates</p>
+            </div>
+            
+            <div class="text-center">
+              <div style="background: rgba(255, 255, 255, 0.2); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md) auto; font-size: 2rem;">
+                🚀
+              </div>
+              <h4 style="color: var(--pure-white); margin-bottom: var(--space-sm);">Early Access</h4>
+              <p style="color: rgba(255, 255, 255, 0.8);">You'll be among the first to download MangoPets when we launch</p>
+            </div>
+            
+            <div class="text-center">
+              <div style="background: rgba(255, 255, 255, 0.2); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md) auto; font-size: 2rem;">
+                🎁
+              </div>
+              <h4 style="color: var(--pure-white); margin-bottom: var(--space-sm);">Free Premium</h4>
+              <p style="color: rgba(255, 255, 255, 0.8);">Enjoy premium features free for your first year</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: var(--space-xl);">
+          <h3 style="color: var(--pure-white); margin-bottom: var(--space-md);">Join our community while you wait!</h3>
+          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--space-lg);">
+            Connect with fellow pet parents and stay updated on our progress
+          </p>
+          
+          <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+            <a href="#" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3); color: var(--pure-white);">
+              📘 Follow on Facebook
+            </a>
+            <a href="#" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3); color: var(--pure-white);">
+              📷 Follow on Instagram
+            </a>
+            <a href="#" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.3); color: var(--pure-white);">
+              🐦 Follow on Twitter
+            </a>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="index.html" class="btn btn-secondary">
+            ← Back to Home
+          </a>
+          <button onclick="shareApp()" class="btn btn-primary">
+            📱 Share MangoPets
+          </button>
+        </div>
+        
+        <div style="margin-top: var(--space-2xl); padding: var(--space-lg); background: rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); max-width: 500px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); margin: 0;">
+            💌 Questions? Reply to our welcome email or reach out to us at <strong style="color: var(--pure-white);">hello@mymangopets.com</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <a href="index.html" class="button">← Back to Homepage</a>
+  <!-- Floating Pet Emojis -->
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden;">
+    <div style="position: absolute; font-size: 2rem; animation: float 6s ease-in-out infinite; top: 20%; left: 10%;">🐕</div>
+    <div style="position: absolute; font-size: 2rem; animation: float 8s ease-in-out infinite; top: 60%; right: 15%; animation-delay: 2s;">🐱</div>
+    <div style="position: absolute; font-size: 2rem; animation: float 7s ease-in-out infinite; top: 80%; left: 20%; animation-delay: 4s;">🐰</div>
+    <div style="position: absolute; font-size: 2rem; animation: float 9s ease-in-out infinite; top: 30%; right: 30%; animation-delay: 1s;">🐦</div>
+    <div style="position: absolute; font-size: 2rem; animation: float 6s ease-in-out infinite; top: 70%; left: 70%; animation-delay: 3s;">🐹</div>
+  </div>
 
+  <!-- JavaScript -->
+  <script>
+    // Share functionality
+    function shareApp() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'MangoPets - The Ultimate Pet Lifestyle App',
+          text: 'Check out MangoPets! The ultimate lifestyle app that combines health management, community, and events for pet parents. Join the waitlist!',
+          url: window.location.origin
+        });
+      } else {
+        // Fallback for browsers that don't support Web Share API
+        const url = encodeURIComponent(window.location.origin);
+        const text = encodeURIComponent('Check out MangoPets! The ultimate lifestyle app for pet parents. Join the waitlist! 🐾');
+        
+        // Open Twitter share dialog
+        window.open(
+          `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+          '_blank',
+          'width=600,height=400'
+        );
+      }
+    }
+    
+    // Add some celebratory animation on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create confetti effect
+      for (let i = 0; i < 20; i++) {
+        createConfetti();
+      }
+    });
+    
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.style.position = 'fixed';
+      confetti.style.fontSize = '1.5rem';
+      confetti.style.pointerEvents = 'none';
+      confetti.style.zIndex = '1000';
+      confetti.innerHTML = ['🎉', '✨', '🐾', '❤️', '🌟'][Math.floor(Math.random() * 5)];
+      
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.top = '-50px';
+      
+      document.body.appendChild(confetti);
+      
+      const duration = 3000 + Math.random() * 2000;
+      const finalY = window.innerHeight + 50;
+      
+      confetti.animate([
+        { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+        { transform: `translateY(${finalY}px) rotate(360deg)`, opacity: 0 }
+      ], {
+        duration: duration,
+        easing: 'ease-out'
+      }).onfinish = () => {
+        confetti.remove();
+      };
+    }
+    
+    // Automatically redirect after 30 seconds (optional)
+    // setTimeout(() => {
+    //   if (confirm('Would you like to return to the home page?')) {
+    //     window.location.href = 'index.html';
+    //   }
+    // }, 30000);
+  </script>
+  
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+  </style>
 </body>
 </html>
