@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mymangopets.com/sitemap.xml
+
+# Block any unwanted bots from specific files
+User-agent: *
+Disallow: /assets/
+Allow: /assets/mangowebsitelogo.jpg
+Allow: /assets/Scree1.png
+Allow: /assets/Scree2.png
+Allow: /assets/Scree3.png
+Allow: /assets/Scree4.png
+Allow: /assets/Scree5.png
+Allow: /assets/Scree6.png
+Allow: /assets/Scree7.png
+Allow: /assets/Scree8.png
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
